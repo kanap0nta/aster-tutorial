@@ -37,13 +37,10 @@ astar-collator --port 30333 --ws-port 9944 --rpc-port 9933 --rpc-cors all --alic
 デプロイ時にガス代がかかるため、ガス代をデバッグアカウントから送金するため下記を行う  
 
 EVM から Native のアドレスを取得する  
-ただし、前提条件として、アドレスに一度でも ASTR を送金したことがあること  
-（変換する方法はほかにもあるかも・・・）  
+[ここ](https://hoonsubin.github.io/evm-substrate-address-converter/)にアクセスし、検索欄に 0x を含む自身の Metamask のアドレスを入力（Change address prefix は 5 のままでよい）  
+スイッチを ON にし、`Current address scheme: H160` に切り替えるとNative のアドレスが取得できる  
 
-[ここ](https://astar.subscan.io/account/)にアクセスし、検索欄に自身の Metamask のアドレスを入力  
-鍵アイコン横のアイコンにカーソルを合わせると `Substrate:xxxxx` がポップアップとして表示されるので、そのポップアップをクリックし、Native のアドレスコピーする
-
-[ここ](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer)にアクセスし、`Accounts` -> `送信` で、任意のデバッグ用アカウントから、先ほどコピーした Native アドレス宛てに、送れるだけトークンを送信する
+[ここ](https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer)にアクセスし、`Accounts` -> `送信` で、任意のデバッグ用アカウントから、先ほど取得した Native アドレス宛てに、送れるだけトークンを送信する
 
 ## Deploy contract
 
