@@ -23,7 +23,7 @@ RUN curl -L -o astar.tar.gz ${ASTAR_CONTROLLER_URL} \
     && rm -f astar.tar.gz
 
 # Add foundry
-ENV FOUNDRY_URL https://github.com/foundry-rs/foundry/releases/download/nightly-0e6c8fb0154b67e192bc5a358a9aef66a0846f33/foundry_nightly_linux_amd64.tar.gz
+ENV FOUNDRY_URL https://github.com/foundry-rs/foundry/releases/download/nightly-5279f69ae7a210487e83755a611d05996beca0ee/foundry_nightly_linux_amd64.tar.gz
 RUN curl -L -o foundry.tar.gz ${FOUNDRY_URL} \
     && tar -zxvf foundry.tar.gz \
     && chmod +x ./anvil ./cast ./forge \
